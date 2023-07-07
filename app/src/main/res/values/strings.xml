@@ -1,0 +1,9 @@
+<resources>
+    <string name="shabaTitle">Shaba</string>
+    <string name="brandText">Estilo y Comodidad</string>
+    <string name="brandName">Shaba</string>
+    <string name="userText">User:</string>
+    <string name="userPasswordText">Password:</string>
+    <string name="logOut">Cerrar sesión</string>
+
+</resources>
