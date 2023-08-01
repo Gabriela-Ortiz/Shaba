@@ -22,7 +22,7 @@
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_baseline_arrow_back_24"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <ImageButton
                 android:id="@+id/menuButton"
@@ -47,103 +47,128 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <ImageView
+        android:id="@+id/perfil_picture"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        tools:layout_editor_absoluteX="68dp"
+        android:src="@android:color/black">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/nombre_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="68dp"
+        android:text="Nombre Usuario"
+        app:layout_constraintLeft_toRightOf="@+id/perfil_picture"
+        app:layout_constraintTop_toBottomOf="@+id/topBar" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/mainLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="200dp"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/logOutButton"
         app:layout_constraintTop_toBottomOf="@+id/topBar"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/precio_text"
+        tools:layout_editor_absoluteX="68dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/layout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Precio"
-            android:layout_marginLeft="40dp"
-            app:layout_constraintTop_toBottomOf="@id/details_image">
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/topBar">
 
-        </TextView>
+            <TextView
+                android:id="@+id/correo_text"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:text="Correo" />
 
-        <TextView
+            <EditText
+                android:id="@+id/correo_edit"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/usuario_text"
+                android:background="@color/gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:text="Descripción"
-            android:layout_marginLeft="40dp"
-            app:layout_constraintTop_toBottomOf="@id/precio_text"
-            tools:layout_editor_absoluteX="40dp">
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/topBar">
 
-        </TextView>
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:text="ID" />
+
+            <EditText
+                android:id="@+id/id_edit"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/usuario_text"
+                android:background="@color/gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/topBar">
+
+            <TextView
+                android:id="@+id/usuario_text"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:text="Usuario" />
+
+            <EditText
+                android:id="@+id/usuario_edit"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/usuario_text"
+                android:background="@color/gray" />
+
+        </LinearLayout>
+
     </LinearLayout>
-    <androidx.appcompat.widget.ActionMenuView
 
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="50dp"
-        android:background="@color/purple_500"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-    </androidx.appcompat.widget.ActionMenuView>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/userText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="false"
-            android:layout_marginLeft="30dp"
-            android:fontFamily="arial"
-            android:text="@string/userText"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-
-    <EditText
-        android:id="@+id/editUser"
-        android:layout_width="200dp"
-        android:layout_height="20dp"
+    <Button
+        android:id="@+id/logOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@id/userText"
-        android:background="@color/gray" />
-
-        <TextView
-            android:id="@+id/passwordText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/userText"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="70dp"
-            android:fontFamily="arial"
-            android:text="@string/userPasswordText"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-
-    <EditText
-        android:id="@+id/editPassword"
-        android:layout_width="200dp"
-        android:layout_height="20dp"
-        android:layout_alignTop="@id/editUser"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="70dp"
-        android:layout_toRightOf="@id/userText"
-        android:background="@color/gray" />
-
-        <Button
-            android:id="@+id/enterButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/editPassword"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="80dp"
-            android:background="@color/gray"
-            android:fontFamily="arial"
-            android:text="@string/logOut" />
-    </RelativeLayout>
+        android:layout_marginTop="100dp"
+        android:background="@color/gray"
+        android:fontFamily="arial"
+        android:text="Log out"
+        app:layout_constraintTop_toBottomOf="@+id/mainLayout"
+        tools:layout_editor_absoluteX="144dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
