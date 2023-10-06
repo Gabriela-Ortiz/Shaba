@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity">
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.example.shaba.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.shaba.Home"
+        android:label="Home" />
+    <fragment
+        android:id="@+id/loggin"
+        android:name="com.example.shaba.Loggin"
+        android:label="Loggin" >
+        <action
+            android:id="@+id/action_loggin_to_home2"
+            app:destination="@id/home" />
+    </fragment>
+</navigation>
