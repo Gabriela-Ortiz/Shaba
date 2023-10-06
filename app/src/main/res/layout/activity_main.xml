@@ -5,34 +5,23 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.shaba.MainActivity">
+    tools:context="com.example.shaba.MainActivity"
+    android:outlineSpotShadowColor="@android:color/holo_orange_dark">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/topBar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@color/purple_200">
-
-        <TextView
-            android:id="@+id/brandTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="183dp"
-            android:layout_marginTop="7dp"
-            android:fontFamily="cursive"
-            android:text="@string/shabaTitle"
-            android:textColor="@color/black"
-            android:textSize="25dp" />
-    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
+        android:id="@+id/brandName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hola test"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="cursive"
+        android:text="@string/brandName"
+        android:textColor="@color/purple_200"
+        android:textSize="80sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="300dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
