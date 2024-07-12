@@ -1,0 +1,16 @@
+name: Pipeline Deployment
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  deployment:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: yumemi-inc/setup-java-gradle@v1
+      - run: ./gradlew ...
