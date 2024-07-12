@@ -5,12 +5,20 @@ on:
     branches:
       - master
 
+
 jobs:
   deployment:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v4
+      - name: checkout to workflow
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: yumemi-inc/setup-java-gradle@v1
-      - run: ./gradlew ...
+      - name: set up Gradle
+        uses: yumemi-inc/setup-java-gradle@v1
+        with:
+          cache-read-only: false
+          gradle-home-cache-cleanup: true
+      - name: Grant execute permission to gradlew
+        run: chmod +x gradlew
+      - run: ./gradlew dependencies
